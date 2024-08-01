@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    /* Primary */
+
+--lime: hsl(61, 70%, 52%);
+--red: hsl(4, 69%, 50%);
+
+/* ### Neutral */
+
+--white: hsl(0, 0%, 100%);
+--slate-100: hsl(202, 86%, 94%);
+--slate-300: hsl(203, 41%, 72%);
+--slate-500: hsl(200, 26%, 54%);
+--slate-700: hsl(200, 24%, 40%);
+--slate-900: hsl(202, 55%, 16%);
+}
+
+
+
+body {
+    background-color: green;;
+    min-height: 100vh;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 16px;
+    background-color: var(--slate-100);
+    
+}
+
+main{
+    width: 60%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--white);
+}
+
+.form, .details {
+    padding: 50px;
+}
+
+.form{
+    background-color: var(--white);
+    border-top-left-radius:12px;
+    border-bottom-left-radius:12px ;
+}
+
+.details{
+    background-color: var(--slate-900);
+    border-top-right-radius:12px;
+    border-bottom-right-radius:12px;
+    border-bottom-left-radius:100px ;
+    color: var(--white);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+header h3 {
+ color: var(--slate-900);
+}
+
+header  a.clear, label {
+    color: var(--slate-700);
+ }
+
+
+ form article {
+    margin-bottom: 12px;
+ }
+
+ form .input-container, form article.radio{
+    display: flex;
+    justify-content: space-between;
+     width: 100%;
+     border: 1px solid var(--slate-700);
+     margin-top: 5px;
+     height: 40px;
+     border-radius: 4px;
+ }
+
+ form .input-container span {
+    background-color: var(--slate-100);
+    padding: 2px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+form article.rate {
+    display: flex;
+    gap: 20px;
+}
+ form article.radio{
+    align-items: center;
+    justify-content: left;
+    
+ }
+
+
+ form article input:not([type="rado"]){
+    width: 85%;
+    height: 15px;
+    border: none;
+    background-color: transparent;
+ }
+ form article input[type="radio"]{
+    accent-color: var(--lime);
+    width: 15%;
+    display: flex;
+    align-items: center;
+    
+ }
+
+ form .error {
+    color: var(--red);
+    font-style: italic;
+    display: none;
+ }
+
+ form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px 50px;
+    background-color: var(--lime);
+    border: none;
+    border-radius: 25px;
+    color: var(--slate-900);
+    font-size: 1rem;
+    font-weight: 700;
+ }
+ 
+ form button:hover{
+    background-color: hsl(61, 50%, 78%);
+ }
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media screen and (min-width:320px) and (max-width: 376px) {
+    body {
+        padding: 20px;
+    }
+    main{
+        width: 100%;
+        min-height: 90vh;
+        grid-template-columns: 1fr;
+
+       }
+    
+    
+}
